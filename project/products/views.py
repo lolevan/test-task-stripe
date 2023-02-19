@@ -13,7 +13,7 @@ stripe.api_key = settings.STRIPE_SECRET_KEY
 
 class ProductView(DetailView):
     model = Item
-    template_name = 'products/product_item.html'
+    template_name = 'products/detail_product.html'
     context_object_name = 'product_item'
 
 
