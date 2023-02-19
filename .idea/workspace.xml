@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="35748e69-be1c-48c4-af88-f90e9ee1e041" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/project/products/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/products/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/project/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +34,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../stripe_learn" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -53,7 +54,7 @@
       <option name="presentableId" value="Default" />
       <updated>1676705200669</updated>
       <workItem from="1676705202144" duration="3712000" />
-      <workItem from="1676802561188" duration="4611000" />
+      <workItem from="1676802561188" duration="4925000" />
     </task>
     <servers />
   </component>

@@ -8,6 +8,9 @@ import stripe
 from .models import Item
 
 
+stripe.api_key = settings.STRIPE_SECRET_KEY
+
+
 class HomeProductsView(ListView):
     model = Item
     template_name = 'products/home.html'
@@ -35,4 +38,3 @@ class CreateCheckoutSessionView(View):
         )
 
         return JsonResponse({'id': session.id})
-    
