@@ -7,14 +7,12 @@
 <body>
 
 <section>
-    <div class="center-block">
-        <div>
+        <div style="text-align: center">
             <h3>Название: {{ product_item.name }}</h3>
             <h4>Описание: {{ product_item.description }}</h4>
             <h5>Цена: $ {{ product_item.price }}.00</h5>
+            <button type="button" id="checkout-button">Buy</button>
         </div>
-    </div>
-    <button type="button" id="checkout-button">Buy</button>
 </section>
 
 {% csrf_token %}
