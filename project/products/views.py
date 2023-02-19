@@ -46,6 +46,7 @@ class CreateCheckoutSessionView(View):
         """function to return session id"""
         product_id = self.kwargs['pk']
         product = Item.objects.get(pk=product_id)
+        domain = 'http://localhost:8000'
         session = stripe.checkout.Session.create(
             line_items=[{
                 'price_data': {
@@ -58,8 +59,8 @@ class CreateCheckoutSessionView(View):
                 'quantity': 1,
             }],
             mode='payment',
-            success_url='http://localhost:8000/success/',
-            cancel_url='http://localhost:8000/cancel/',
+            success_url=domain + '/success/',
+            cancel_url=domain + '/cancel/',
         )
 
         return JsonResponse({'id': session.id})
