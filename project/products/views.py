@@ -12,14 +12,17 @@ stripe.api_key = settings.STRIPE_SECRET_KEY
 
 
 class SuccessView(TemplateView):
+    """Class for view success template"""
     template_name = 'products/success.html'
 
 
 class CancelView(TemplateView):
+    """Class for view cancel template"""
     template_name = 'products/cancel.html'
 
 
 class ProductView(DetailView):
+    """Class for view one item"""
     model = Item
     template_name = 'products/detail_product.html'
     context_object_name = 'product_item'
@@ -31,13 +34,16 @@ class ProductView(DetailView):
 
 
 class HomeProductsView(ListView):
+    """Class for view all items"""
     model = Item
     template_name = 'products/home.html'
     context_object_name = 'products'
 
 
 class CreateCheckoutSessionView(View):
+    """Class for create checkout session"""
     def get(self, request, *args, **kwargs):
+        """function to return session id"""
         product_id = self.kwargs['pk']
         product = Item.objects.get(pk=product_id)
         session = stripe.checkout.Session.create(
