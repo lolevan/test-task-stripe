@@ -2,20 +2,19 @@
 <html lang="en">
 <head>
     <title>Buy item</title>
-    <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
     <script src="https://js.stripe.com/v3/"></script>
 </head>
 <body>
 
 <section>
-    <div>
+    <div class="center-block">
         <div>
             <h3>Название: {{ product_item.name }}</h3>
             <h4>Описание: {{ product_item.description }}</h4>
-            <h5>Цена: ${{ product_item }}</h5>
+            <h5>Цена: $ {{ product_item.price }}.00</h5>
         </div>
     </div>
-    <button type="button" id="checkout-button">Checkout</button>
+    <button type="button" id="checkout-button">Buy</button>
 </section>
 
 {% csrf_token %}

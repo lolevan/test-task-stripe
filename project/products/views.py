@@ -1,5 +1,5 @@
 from django.views import View
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, TemplateView
 from django.conf import settings
 from django.http import JsonResponse
 
@@ -9,6 +9,14 @@ from .models import Item
 
 
 stripe.api_key = settings.STRIPE_SECRET_KEY
+
+
+class SuccessView(TemplateView):
+    template_name = 'products/success.html'
+
+
+class CancelView(TemplateView):
+    template_name = 'products/cancel.html'
 
 
 class ProductView(DetailView):
@@ -39,7 +47,7 @@ class CreateCheckoutSessionView(View):
                     'product_data': {
                         'name': product.name,
                     },
-                    'unit_amount': product.price,
+                    'unit_amount': product.price * 100,
                 },
                 'quantity': 1,
             }],
