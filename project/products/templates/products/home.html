@@ -2,11 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Home page</title>
+    <title>Home</title>
 </head>
 <body>
-<form action="/create-checkout-session" method="POST">
-    <button type="submit">Checkout</button>
-</form>
+{% for product in products %}
+    <h1 >{{ product.name }}</h1>
+    <a href="{{ product.get_absolute_url }}">{{ product.price }}</a>
+    <hr>
+{% endfor %}
+
 </body>
 </html>
