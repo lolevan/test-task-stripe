@@ -10,7 +10,7 @@ from .views import (
 
 
 urlpatterns = [
-    path('', HomeProductsView.as_view(), name='home-page'),
+    # path('', HomeProductsView.as_view(), name='home-page'),
     path('success/', SuccessView.as_view(), name='success'),
     path('cancel/', CancelView.as_view(), name='cancel'),
     # At the end, a slash is usually put, but according to the test it should be done like this
