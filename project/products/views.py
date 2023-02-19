@@ -19,6 +19,7 @@ class ProductView(DetailView):
     def get_context_data(self, **kwargs):
         context = super(ProductView, self).get_context_data(**kwargs)
         context['STRIPE_PUBLIC_KEY'] = settings.STRIPE_PUBLIC_KEY
+        return context
 
 
 class HomeProductsView(ListView):
