@@ -16,6 +16,10 @@ class ProductView(DetailView):
     template_name = 'products/detail_product.html'
     context_object_name = 'product_item'
 
+    def get_context_data(self, **kwargs):
+        context = super(ProductView, self).get_context_data(**kwargs)
+        context['STRIPE_PUBLIC_KEY'] = settings.STRIPE_PUBLIC_KEY
+
 
 class HomeProductsView(ListView):
     model = Item
