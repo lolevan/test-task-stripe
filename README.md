@@ -20,9 +20,9 @@ API с двумя методами:
 
 ### Дополнительные задачи:
 
-&#9744; Запуск используя Docker 
+&#9745; Запуск используя Docker 
 
-&#9744; Использование environment variables
+&#9745; Использование environment variables
 
 &#9745; Просмотр Django Моделей в Django Admin панели
 
@@ -37,43 +37,17 @@ API с двумя методами:
 &#9744; Реализовать не Stripe Session, а Stripe Payment Intent.
 
  ## Как запустить проект:
-Клонировать репозиторий и перейти в него в командной строке:
+ 
+ Клонировать репозиторий и перейти в него в командной строке:
 
 ```
 git clone https://github.com/lolevan/test-task-stripe.git
 ```
 
 ```
-cd test-task-stripe/project/
+cd test-task-stripe/
 ```
-
-Cоздать и активировать виртуальное окружение:
-
-```
-python -m venv venv
-```
-
-```
-source venv/Scripts/activate
-```
-
-или
-
-```
-source venv/bin/activate
-```
-
-Установить зависимости из файла requirements.txt:
-
-```
-pip install -r requirements.txt
-```
-
-Выполнить миграции:
-
-```
-python manage.py migrate
-```
+ 
 Зарегестрироваться:
 
 ```
@@ -87,15 +61,14 @@ https://dashboard.stripe.com/test/apikeys
 
 ![da](https://user-images.githubusercontent.com/86129944/219987755-48632420-8ba7-4d1f-b465-ff0b710dac94.png)
 
-Вставить в projects/settings.py ключи
+Вставить в .env.dev все переменные которые вам нужны
 
-![image](https://user-images.githubusercontent.com/86129944/219987828-6ed59173-103f-4b63-95ce-e1f41dd879ca.png)
+![image](https://user-images.githubusercontent.com/86129944/229333063-6dbcd648-b458-4463-bf4c-301e0fd86867.png)
 
-
-Запустить проект:
+Запустить через Docker:
 
 ```
-python manage.py runserver
+docker-compose up -d --build
 ```
 
 Перейти по ссылке:
