@@ -1,3 +1,7 @@
+asgiref==3.6.0
+backports.zoneinfo==0.2.1
 Django==4.0.4
+sqlparse==0.4.3
+tzdata==2023.3
 stripe==5.2.0
 psycopg2-binary==2.9.5
