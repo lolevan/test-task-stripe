@@ -18,6 +18,6 @@ python manage.py flush --no-input
 python manage.py migrate
 
 # shellcheck disable=SC2145
-echo "Executing command: $@"
+echo "Executing command: $@ "
 
 exec "$@"
